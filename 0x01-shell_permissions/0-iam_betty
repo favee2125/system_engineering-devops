@@ -1,2 +1,2 @@
-#!/bib/ban
+#!/bin/bash
 su betty
