@@ -1,2 +1,11 @@
 #!/bin/bash
-line_number=0; while IFS= read -r line; do line_number=$((line_number + 1)); if [ "$line_number" -eq 3 ]; then echo "$line"; break; fi; done < iacta
+line=0
+while IFS= read -r txt
+do
+  line=$((line + 1))
+  if [ "$line" = 3 ]
+  then
+    echo "$txt"
+    break
+  fi
+done < iacta
