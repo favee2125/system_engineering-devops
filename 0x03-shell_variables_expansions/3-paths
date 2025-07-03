@@ -1,2 +1,2 @@
 #!/bin/bash
-echo directories{1..3}.txt
+echo "$PATH" | tr ':' '\n' | wc -l
