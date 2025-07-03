@@ -1,2 +1,2 @@
 #!/bin/bash
-export MY_VARIABLE="BEST, School!"
+BEST="School"
