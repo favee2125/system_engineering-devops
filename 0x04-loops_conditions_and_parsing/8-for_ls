@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# This script lists non-hidden files and shows only the part after the first dash (-) in each filename
+# This script lists non-hidden files in the current directory and displays only the part of each filename after the first dash (-)
 for file in *; do
-  # Check if it's a file and not a hidden one
   if [[ -f "$file" && "$file" == *-* ]]; then
     echo "${file#*-}"
   fi
