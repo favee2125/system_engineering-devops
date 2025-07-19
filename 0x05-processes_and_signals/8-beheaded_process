@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # This script kills the 7-highlander process using SIGKILL
 
-# Find the PID(s) of the 7-highlander process
 pids=$(pgrep -f 7-highlander)
 
-# If any found, kill them with SIGKILL
 if [ -n "$pids" ]; then
-  kill -9 $pids
+  # Use xargs to handle multiple PIDs safely
+  echo "$pids" | xargs -r kill -9
 fi
