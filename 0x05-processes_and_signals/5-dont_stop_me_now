@@ -6,5 +6,5 @@ pids=$(pgrep -f "./4-to_infinity_and_beyond")
 
 # Kill the process(es) if found
 if [ -n "$pids" ]; then
-  kill $pids
+  kill "$pids"
 fi
