@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# This script stops the 4-to_infinity_and_beyond process without using kill or killall
-
-# Find the PID(s) of the script
+# shellcheck disable=SC2046
 pids=$(pgrep -f "./4-to_infinity_and_beyond")
 
-# Stop the process(es) using the `echo` to /proc method
 for pid in $pids; do
-  [ -d "/proc/$pid" ] && echo "Stopping PID $pid" && > "/proc/$pid/fd/0"
+  # Close stdin by redirecting true's output to stdin fd of the process
+  true > "/proc/$pid/fd/0" 2>/dev/null
 done
