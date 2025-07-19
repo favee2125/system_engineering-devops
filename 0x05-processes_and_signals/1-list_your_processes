@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script displays a hierarchical list of all currently running processes with detailed user-oriented information.
+
+ps -eo user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,cmd --forest
