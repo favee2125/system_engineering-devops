@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# This script displays the PID and full command path of all processes whose name contains "bash"
-pgrep -a bash
+# Dispays the pid along with the process 
+
+pgrep -l bash
