@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC2046
-pids=$(pgrep -f "./4-to_infinity_and_beyond")
-
-for pid in $pids; do
-  # Close stdin by redirecting true's output to stdin fd of the process
-  true > "/proc/$pid/fd/0" 2>/dev/null
-done
+# stops a program without using kill or killall command
+pkill -f 4-to_infinity_and_beyond
