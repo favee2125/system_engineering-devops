@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
-# This script displays a hierarchical list of all currently running processes with detailed user-oriented information and proper formatting.
+#!/usr/bin/env bash 
+# Displays a list of currently running processes
 
-ps -eo user,lstart,cmd --forest | awk 'BEGIN {print "USER STARTED CMD"} NR>1 {printf "%s %s %s %s %s %s %s\n", $1, $2, $3, $4, $5, $6, substr($0, index($0,$8))}'
+ps -auxf
